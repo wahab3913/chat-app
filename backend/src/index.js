@@ -20,10 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: [
-      "https://chat-app-blue-iota-28.vercel.app",
-      "http://localhost:5173",
-    ],
+    origin: "https://chat-app-blue-iota-28.vercel.app",
     credentials: true,
   })
 );
