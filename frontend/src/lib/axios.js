@@ -3,7 +3,7 @@ import axios from "axios";
 export const axiosInstance = axios.create({
   baseURL:
     // import.meta.env.MODE === "development"
-    "http://localhost:8081/api",
+    "https://chat-app-blue-iota-28.vercel.app/api",
   // : "/api",
   withCredentials: true,
 });
