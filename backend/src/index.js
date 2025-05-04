@@ -21,8 +21,8 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: [
-      "http://localhost:5173",
       "https://chat-app-blue-iota-28.vercel.app",
+      "http://localhost:5173",
     ],
     credentials: true,
   })
@@ -31,6 +31,9 @@ app.use(
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
